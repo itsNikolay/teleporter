@@ -4,10 +4,9 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rspec'
-gem 'railties'
 #
 group :test do
-  gem 'rails'
+  #gem 'rails'
   gem 'sqlite3'
-  gem 'teleporter', path: '~/projects/OPENSOURCE/teleporter'
+  #gem 'teleporter', path: '~/projects/OPENSOURCE/teleporter'
 end

@@ -44,3 +44,9 @@ namespace :spec do
     IO.popen('bundle exec rake db:migrate').read
   end
 end
+
+
+
+task :release do
+  sh "gem push teleporter-#{Teleporter::VERSION}.gem"
+end
