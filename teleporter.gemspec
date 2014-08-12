@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Teleporter::VERSION
   spec.authors       = ["Ponomarev Nikolay"]
   spec.email         = ["itsnikolay@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Generator for app}
+  spec.description   = %q{Generators for apps}
   spec.homepage      = ""
   spec.license       = "MIT"
 
