@@ -1,7 +1,3 @@
-require "rails"
-require 'rails/generators'
-require 'bundler'
-
 module Initial
   class GemfileGenerator < Rails::Generators::Base
     def add_gems
@@ -18,7 +14,7 @@ module Initial
         gem 'capistrano-rails'
         gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
         gem 'quiet_assets'
-        gem "letter_opener"
+        gem 'letter_opener'
       end
 
       gem_group :production, :staging do

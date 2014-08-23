@@ -1,7 +1,3 @@
-require "rails"
-require 'rails/generators'
-require 'bundler'
-
 module Initial
   class RspecBaseGenerator < Rails::Generators::Base
     source_root File.expand_path("../templates", __FILE__)
