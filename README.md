@@ -8,7 +8,8 @@ $ rails g initial:start
 $ rails g admin:start
 ```
 # Testing gem
-$ gem uninstall teleporter && rake install
+commit changes and
+$ rake build install
 $ bu teleporter --local | grep teleporter
 
 # Release gem

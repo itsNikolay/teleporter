@@ -4,8 +4,8 @@ module Initial
     argument :template, type: :string, default: "default"
 
     def add
-      generate 'inital:gemfile'
-      generate 'inital:rspec_base'
+      generate 'initial:gemfile'
+      generate 'initial:rspec_base'
     end
   end
 end
