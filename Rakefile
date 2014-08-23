@@ -1,5 +1,8 @@
 require "bundler/gem_tasks"
-require File.expand_path("../load_paths", __FILE__)
+
+task :release do
+  sh "gem push teleporter-#{Teleporter::VERSION}.gem"
+end
 
 #require 'rails'
 #require 'rails/generators'
@@ -45,8 +48,3 @@ require File.expand_path("../load_paths", __FILE__)
   #end
 #end
 
-
-
-task :release do
-  sh "gem push teleporter-#{Teleporter::VERSION}.gem"
-end
