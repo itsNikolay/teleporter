@@ -7,6 +7,7 @@ module Initial
       generate 'initial:gemfile'
       generate 'initial:welcome'
       generate 'initial:rspec_base'
+      generate 'initial:capistrano'
     end
   end
 end

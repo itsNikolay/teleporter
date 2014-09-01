@@ -18,18 +18,15 @@ module Initial
         gem 'webmock'
       end
 
-      #Bundler.with_clean_env do
-        run "bundle install"
-      #end
+      run "bundle install"
 
-      #Rails::Generators.invoke 'rspec:install'
       generate 'rspec:install'
 
-      template 'capybara.rb', 'spec/support/capybara.rb'
-      template 'database_cleaner.rb', 'spec/support/database_cleaner.rb'
-      template 'factory_girl.rb', 'spec/support/factory_girl.rb'
-      template 'spec_helpers.rb', 'spec/support/spec_helpers.rb'
-      template 'devise.rb', 'spec/support/devise.rb'
+      template 'rspec_base/capybara.rb',         'spec/support/capybara.rb'
+      template 'rspec_base/database_cleaner.rb', 'spec/support/database_cleaner.rb'
+      template 'rspec_base/factory_girl.rb',     'spec/support/factory_girl.rb'
+      template 'rspec_base/spec_helpers.rb',     'spec/support/spec_helpers.rb'
+      template 'rspec_base/devise.rb',           'spec/support/devise.rb'
 
     end
 

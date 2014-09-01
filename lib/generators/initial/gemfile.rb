@@ -6,13 +6,9 @@ module Initial
       gem 'russian'
       gem 'sidekiq'
       gem 'haml-rails'
+      gem 'therubyracer'
 
       gem_group :development do
-        gem 'capistrano'
-        gem 'capistrano-rbenv'
-        gem 'capistrano-bundler'
-        gem 'capistrano-rails'
-        gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
         gem 'quiet_assets'
         gem 'letter_opener'
       end
