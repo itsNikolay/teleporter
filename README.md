@@ -11,7 +11,7 @@ $ rails g admin:start
 # Testing gem
 commit changes and
 $ rake build install
-$ bu teleporter --local | grep teleporter
+$ bu --local | grep teleporter
 
 # Release gem
 $ rake release
