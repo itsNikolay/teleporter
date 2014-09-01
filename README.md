@@ -4,6 +4,7 @@
 $ rails g initial:start
   $ rails g initial:gemfile
   $ rails g initial:rspec_base
+  $ rails g initial:welcome
 
 $ rails g admin:start
 ```

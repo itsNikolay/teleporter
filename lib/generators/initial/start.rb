@@ -5,6 +5,7 @@ module Initial
 
     def add
       generate 'initial:gemfile'
+      generate 'initial:welcome'
       generate 'initial:rspec_base'
     end
   end
