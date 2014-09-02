@@ -16,6 +16,11 @@ module Initial
       directory 'capistrano/tasks', 'lib/capistrano/tasks'
       directory 'capistrano/shared', 'config/deploy/shared'
 
+      files = %w(substitute_strings.rb template.rb)
+      files.each do |f|
+        template "capistrano/lib/#{f}", "lib/capistrano/#{f}"
+      end
+
     end
   end
 end
