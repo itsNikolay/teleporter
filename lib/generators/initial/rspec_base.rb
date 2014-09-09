@@ -22,12 +22,13 @@ module Initial
 
       generate 'rspec:install'
 
-      template 'rspec_base/capybara.rb',         'spec/support/capybara.rb'
-      template 'rspec_base/database_cleaner.rb', 'spec/support/database_cleaner.rb'
-      template 'rspec_base/factory_girl.rb',     'spec/support/factory_girl.rb'
-      template 'rspec_base/spec_helpers.rb',     'spec/support/spec_helpers.rb'
-      template 'rspec_base/devise.rb',           'spec/support/devise.rb'
-      template 'rspec_base/vcr.rb',              'spec/support/vcr.rb'
+      template 'rspec_base/configs/capybara.rb',         'spec/support/configs/capybara.rb'
+      template 'rspec_base/configs/database_cleaner.rb', 'spec/support/configs/database_cleaner.rb'
+      template 'rspec_base/configs/factory_girl.rb',     'spec/support/configs/factory_girl.rb'
+      template 'rspec_base/configs/devise.rb',           'spec/support/configs/devise.rb'
+      template 'rspec_base/configs/vcr.rb',              'spec/support/configs/vcr.rb'
+
+      template 'rspec_base/shared_examples/sample_shared.rb', 'spec/support/shared_examples/sample_shared.rb'
 
       run 'bundle exec spring binstub rspec'
 
