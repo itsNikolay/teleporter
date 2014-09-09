@@ -27,6 +27,9 @@ module Initial
       template 'rspec_base/factory_girl.rb',     'spec/support/factory_girl.rb'
       template 'rspec_base/spec_helpers.rb',     'spec/support/spec_helpers.rb'
       template 'rspec_base/devise.rb',           'spec/support/devise.rb'
+      template 'rspec_base/vcr.rb',              'spec/support/vcr.rb'
+
+      run 'bundle exec spring binstub rspec'
 
     end
 
