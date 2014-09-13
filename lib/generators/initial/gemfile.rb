@@ -14,6 +14,13 @@ module Initial
       Bundler.with_clean_env do
         run "bundle install"
       end
+      insert_into_file "config/application.rb", before: "  end\nend\n" do
+%Q{
+    config.time_zone = 'Moscow'
+    config.i18n.default_locale = :ru
+
+}
+      end
     end
   end
 end
