@@ -5,16 +5,13 @@ module Initial
       gem 'cancancan'
       gem 'russian'
       gem 'sidekiq'
+      gem 'puma'
       gem 'haml-rails'
       gem 'therubyracer'
 
       gem_group :development do
         gem 'quiet_assets'
         gem 'letter_opener'
-      end
-
-      gem_group :production, :staging do
-        gem 'unicorn'
       end
 
       Bundler.with_clean_env do
