@@ -3,7 +3,7 @@
 ```
 $ rails g initial:start
   $ rails g initial:gemfile
-  $ rails g initial:rspec_base
+  $ rails g initial:rspec
   $ rails g initial:welcome
   $ rails g initial:capistrano
 
