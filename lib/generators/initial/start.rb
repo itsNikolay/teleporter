@@ -8,6 +8,7 @@ module Initial
       generate 'initial:welcome'
       generate 'initial:rspec'
       generate 'initial:capistrano'
+      generate 'initial:bootstrap'
     end
   end
 end

@@ -25,11 +25,14 @@ module Initial
       uncomment_lines 'Capfile', /require 'capistrano\/bundler'/
       uncomment_lines 'Capfile', /require 'capistrano\/rails\/assets'/
       uncomment_lines 'Capfile', /require 'capistrano\/rails\/migrations'/
-      insert_into_file "Capfile", "require 'capistrano/sidekiq'\n",
+      insert_into_file "Capfile",
+                       "require 'capistrano/sidekiq'\n",
                        after: "require 'capistrano/rails/migrations'\n"
-      insert_into_file "Capfile", "require 'capistrano/puma'\n",
+      insert_into_file "Capfile",
+                       "require 'capistrano/puma'\n",
                        after: "require 'capistrano/sidekiq'\n"
-      insert_into_file "Capfile", "require 'capistrano/puma/monit'\n",
+      insert_into_file "Capfile",
+                       "require 'capistrano/puma/monit'\n",
                        after: "require 'capistrano/sidekiq'\n"
 
       copy_file 'capistrano/deploy/deploy.rb', 'config/deploy.rb'

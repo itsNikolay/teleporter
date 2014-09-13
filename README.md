@@ -6,6 +6,7 @@ $ rails g initial:start
   $ rails g initial:rspec
   $ rails g initial:welcome
   $ rails g initial:capistrano
+  $ rails g initial:bootstrap
 
 $ rails g admin:start
 ```

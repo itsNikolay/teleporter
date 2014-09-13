@@ -17,6 +17,8 @@ module Initial
       Bundler.with_clean_env do
         run "bundle install"
       end
+
+      generate 'cancan:ability'
     end
   end
 end
