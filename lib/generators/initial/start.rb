@@ -9,6 +9,7 @@ module Initial
       generate 'initial:rspec'
       generate 'initial:capistrano'
       generate 'initial:bootstrap'
+      generate 'initial:devise'
     end
   end
 end

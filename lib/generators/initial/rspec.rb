@@ -5,6 +5,8 @@ module Initial
     def add
       gem_group :development, :test do
         gem "rspec-rails"
+        gem 'spring'
+        gem 'spring-commands-rspec'
       end
 
       gem_group :test do
@@ -20,6 +22,7 @@ module Initial
 
       Bundler.with_clean_env do
         run "bundle install"
+        run 'bundle exec spring binstub rspec'
       end
 
       generate 'rspec:install'
@@ -31,9 +34,6 @@ module Initial
       template 'rspec/configs/vcr.rb',              'spec/support/configs/vcr.rb'
 
       template 'rspec/shared_examples/sample_shared.rb', 'spec/support/shared_examples/sample_shared.rb'
-
-      run 'bundle exec spring binstub rspec'
-
     end
 
   end
