@@ -18,7 +18,9 @@ module Initial
         gem 'webmock'
       end
 
-      run "bundle install"
+      Bundler.with_clean_env do
+        run "bundle install"
+      end
 
       generate 'rspec:install'
 

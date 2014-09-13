@@ -15,10 +15,10 @@ module Initial
       copy_file 'bootstrap/bootstrap-base.scss',
                 'app/assets/stylesheets/shared/bootstrap-base.scss'
       insert_into_file "app/assets/stylesheets/application.css",
-                       "*= require shared/bootstrap_base\n",
+                       "*= require shared/bootstrap-base\n",
                        after: "/*\n"
       prepend_to_file "app/assets/javascripts/application.js",
-                       "//= require bootstrap\n"
+                       " //= require bootstrap\n"
 
     end
   end
