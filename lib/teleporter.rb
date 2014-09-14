@@ -11,5 +11,6 @@ require "generators/initial/capistrano"
 require "generators/initial/bootstrap"
 require "generators/initial/devise"
 require "generators/initial/gitignore"
+require "generators/initial/database"
 
 require "generators/admin/start"

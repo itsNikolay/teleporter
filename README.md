@@ -4,6 +4,7 @@
 $ rails g initial:start
   $ rails g initial:gemfile
   $ rails g initial:gitignore
+  $ rails g initial:database
   $ rails g initial:rspec
   $ rails g initial:welcome
   $ rails g initial:capistrano

@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: root
+  password: ""
+
+development:
+  <<: *common
+  database: app_development
+
+test:
+  <<: *common
+  database: app_test
+
+production:
+  <<: *common
+  database: app_development
