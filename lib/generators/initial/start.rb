@@ -5,6 +5,7 @@ module Initial
 
     def add
       generate 'initial:gemfile'
+      generate 'initial:gitignore'
       generate 'initial:welcome'
       generate 'initial:rspec'
       generate 'initial:capistrano'

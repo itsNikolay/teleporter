@@ -1,0 +1,14 @@
+/.bundle
+/vendor/bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*.log
+/tmp
+config/database.yml
+config/secrets.yml
+/coverage/
+/spec/tmp
+public/assets/*
+public/uploads/*
+.idea
+.rvmrc
