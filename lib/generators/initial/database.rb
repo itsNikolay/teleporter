@@ -3,8 +3,9 @@ module Initial
     source_root File.expand_path("../templates", __FILE__)
 
     def add
-      copy_file 'database/database.yml', 'config/database.yml'
-      copy_file 'database/database.yml', 'config/database.yml.example'
+      @name = ask "Type the project's name"
+      template 'database/database.yml', 'config/database.yml'
+      template 'database/database.yml', 'config/database.yml.example'
     end
   end
 end

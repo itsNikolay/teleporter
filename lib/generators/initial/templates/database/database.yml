@@ -7,12 +7,12 @@ common: &common
 
 development:
   <<: *common
-  database: app_development
+  database: <%= @name %>_development
 
 test:
   <<: *common
-  database: app_test
+  database: <%= @name %>_test
 
 production:
   <<: *common
-  database: app_development
+  database: <%= @name %>_development
