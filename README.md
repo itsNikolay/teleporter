@@ -10,6 +10,7 @@ $ rails g initial:start
   $ rails g initial:capistrano
   $ rails g initial:bootstrap
   $ rails g initial:devise
+    $ rails g initial:devise_oauth
 
 $ rails g admin:start
 ```

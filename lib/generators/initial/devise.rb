@@ -41,6 +41,9 @@ module Initial
 
       model = ask "Type MODEL to bootstrap devise:"
       generate "devise #{model}"
+
+      with_oauth = ask 'Add oauth? (y/n)'
+      generate 'devise_oauth' if with_oauth =~ /y/
     end
   end
 end

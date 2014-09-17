@@ -10,6 +10,7 @@ require "generators/initial/welcome"
 require "generators/initial/capistrano"
 require "generators/initial/bootstrap"
 require "generators/initial/devise"
+require "generators/initial/devise_oauth"
 require "generators/initial/gitignore"
 require "generators/initial/database"
 
