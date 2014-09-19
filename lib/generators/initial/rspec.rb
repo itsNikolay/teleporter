@@ -27,13 +27,9 @@ module Initial
 
       generate 'rspec:install'
 
-      template 'rspec/configs/capybara.rb',         'spec/support/configs/capybara.rb'
-      template 'rspec/configs/database_cleaner.rb', 'spec/support/configs/database_cleaner.rb'
-      template 'rspec/configs/factory_girl.rb',     'spec/support/configs/factory_girl.rb'
-      template 'rspec/configs/devise.rb',           'spec/support/configs/devise.rb'
-      template 'rspec/configs/vcr.rb',              'spec/support/configs/vcr.rb'
-
-      template 'rspec/shared_examples/sample_shared.rb', 'spec/support/shared_examples/sample_shared.rb'
+      directory 'rspec/configs', 'spec/support/configs'
+      directory 'rspec/factories', 'spec/factories'
+      directory 'rspec/shared_examples', 'spec/support/shared_examples'
     end
 
   end

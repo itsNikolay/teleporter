@@ -1,3 +1,3 @@
 module Teleporter
-  VERSION = "0.0.30"
+  VERSION = "0.0.31"
 end
