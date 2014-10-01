@@ -3,7 +3,7 @@ module Initial
     source_root File.expand_path("../templates", __FILE__)
 
     def add
-      gem 'simple_form'
+      gem 'simple_form', '3.1.0.rc2'
 
       Bundler.with_clean_env do
         run "bundle install"
