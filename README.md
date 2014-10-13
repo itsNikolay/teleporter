@@ -7,22 +7,22 @@ Rails generators for a fresh application
 
 Table of content
 ----------------
-* rails g initial:start
-  * rails g initial:gemfile
-  * rails g initial:gitignore
-  * rails g initial:database
-  * rails g initial:rspec
-  * rails g initial:welcome
-  * rails g initial:capistrano
-  * rails g initial:bootstrap
-  * rails g initial:simple_form
-  * rails g initial:devise
-    * rails g initial:devise_oauth
+* [rails g initial:start](#rails-g-initialstart)
+  * [rails g initial:gemfile](#rails-g-initialgemfile)
+  * [rails g initial:gitignore](#rails-g-initialgitignore)
+  * [rails g initial:database](#rails-g-initialdatabase)
+  * [rails g initial:rspec](#rails-g-initialrspec)
+  * [rails g initial:welcome](#rails-g-initialwelcome)
+  * [rails g initial:capistrano](#rails-g-initialcapistrano)
+  * [rails g initial:bootstrap](#rails-g-initialbootstrap)
+  * [rails g initial:simple_form](#rails-g-initialsimple_form)
+  * [rails g initial:devise](#rails-g-initialdevise)
+    * [rails g initial:devise_oauth](#rails-g-initialdevise_oauth)
 
 ## rails g initial:start
 ```shell
 $ rails g initial:start
-``
+```
 runs all generators below
 
 ### rails g initial:gemfile
