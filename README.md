@@ -1,6 +1,6 @@
 Teleporter
 ----------
-Rails generators for a fresh application
+Generators for a fresh Rails application
 
 [![Gem Version](https://badge.fury.io/rb/teleporter.svg)](http://badge.fury.io/rb/teleporter)
 
