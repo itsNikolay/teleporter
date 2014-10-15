@@ -18,6 +18,7 @@ Table of content
   * [rails g initial:simple_form](#rails-g-initialsimple_form)
   * [rails g initial:devise](#rails-g-initialdevise)
     * [rails g initial:devise_oauth](#rails-g-initialdevise_oauth)
+  * [rails g initial:api](#rails-g-initialapi)
 
 ## rails g initial:start
 ```shell
@@ -67,3 +68,8 @@ generates files for devise installation into a fresh rails application
 
 #### rails g initial:devise_oauth
 generates files for devise-oauth providers
+
+#### rails g initial:api
+generates `api/v1/. . .` files for json api
+adds routes for subdomain `api.example.com`
+adds `gem jsonbuilder`
