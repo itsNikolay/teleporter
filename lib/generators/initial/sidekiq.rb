@@ -21,7 +21,9 @@ require 'sidetiq/web'
                          }
 
                          route %q{
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :user, ->(u) { u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
                          }
     end
   end
