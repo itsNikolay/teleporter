@@ -15,5 +15,6 @@ require "generators/initial/devise_oauth"
 require "generators/initial/gitignore"
 require "generators/initial/database"
 require "generators/initial/api"
+require "generators/initial/sidekiq"
 
 require "generators/admin/start"

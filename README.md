@@ -19,6 +19,7 @@ Table of content
   * [rails g initial:devise](#rails-g-initialdevise)
     * [rails g initial:devise_oauth](#rails-g-initialdevise_oauth)
   * [rails g initial:api](#rails-g-initialapi)
+  * [rails g initial:sidekiq](#rails-g-initialsidekiq)
 
 ## rails g initial:start
 ```shell
@@ -73,3 +74,8 @@ generates files for devise-oauth providers
 generates `api/v1/. . .` files for json api
 adds routes for subdomain `api.example.com`
 adds `gem jsonbuilder`
+
+#### rails g initial:sidekiq
+adds `sidekiq` and `sidetiq` to rails project
+adds routes to mount /sidekiq monitoring
+adds templates for worker class for sidekiq and sidekiq

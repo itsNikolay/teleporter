@@ -2,7 +2,6 @@ module Initial
   class GemfileGenerator < Rails::Generators::Base
     def add_gems
       gem 'russian'
-      gem 'sidekiq'
       gem 'puma'
       gem 'haml-rails'
       gem 'therubyracer'
