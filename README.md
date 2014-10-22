@@ -20,6 +20,7 @@ Table of content
     * [rails g initial:devise_oauth](#rails-g-initialdevise_oauth)
   * [rails g initial:api](#rails-g-initialapi)
   * [rails g initial:sidekiq](#rails-g-initialsidekiq)
+  * [rails g initial:redactor_rails](#rails-g-initialredactor_rails)
 
 ## rails g initial:start
 ```shell
@@ -79,3 +80,7 @@ adds `gem jsonbuilder`
 adds `sidekiq` and `sidetiq` to rails project
 adds routes to mount /sidekiq monitoring
 adds templates for worker class for sidekiq and sidekiq
+
+
+#### rails g initial:redactor_rails
+setups `redactor_rails` gem in application

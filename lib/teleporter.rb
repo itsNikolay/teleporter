@@ -16,5 +16,6 @@ require "generators/initial/gitignore"
 require "generators/initial/database"
 require "generators/initial/api"
 require "generators/initial/sidekiq"
+require "generators/initial/redactor_rails"
 
 require "generators/admin/start"
