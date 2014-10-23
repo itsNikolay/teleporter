@@ -16,7 +16,7 @@ namespace :deploy do
 
       ask(:db_password, 'Type database password:')
 
-      database_content = %Q{#{fetch(:rails_env)}
+      database_content = %Q{#{fetch(:rails_env)}:
   adapter: #{db_adapter}
   timeout: 5000
   encoding: utf8
