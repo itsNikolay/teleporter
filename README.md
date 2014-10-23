@@ -55,6 +55,7 @@ generates `WelcomeController#index` and uses it as `root_path`
 ### rails g initial:capistrano
 adds gems: `capistrano`, `capistrano-rbenv`, `capistrano-bundler`, `capistrano-rails`, `capistrano-sidekiq`, `capistrano-puma`
 generate Capistrano 3 configs for deployment
+add tasks
 
 ### rails g initial:bootstrap
 adds gems `bootstrap-sass`, `kaminari-bootstrap`, `bh`, `autoprefixer-rails`
