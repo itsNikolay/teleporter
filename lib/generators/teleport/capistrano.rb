@@ -8,7 +8,7 @@ module Teleport
         gem 'capistrano-rbenv'
         gem 'capistrano-bundler'
         gem 'capistrano-rails'
-        gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
+        gem 'capistrano-sidekiq'
         gem 'capistrano3-puma'
       end
 
@@ -35,21 +35,20 @@ module Teleport
                        "require 'capistrano/puma/monit'\n",
                        after: "require 'capistrano/sidekiq'\n"
 
-      @app_name = ask 'App name:'
-      @git_repo_url = ask 'Git repo (git@github.com:itsNikolay/puma-testing.git):'
-      @deploy_user = ask 'Deploy username (deploy):'
-      @ruby_version = ask 'Ruby version (2.1.2)'
-      @production_server_address = ask 'Production server (192.168.33.10):'
-      @add_staging = ask 'Add staging (y/n):'
+      @app_name = ask 'App name', :bold, default: 'blog'
+      @git_repo_url = ask 'Git repo', :bold, default: 'git@github.com:itsNikolay/puma-testing.git'
+      @deploy_user = ask 'Deploy username default', :bold, default: 'deploy'
+      @ruby_version = ask 'Ruby version', :bold, limited_to: ['2.1.3', '2.1.2', '1.9.3']
+      @production_server_address = ask 'Production server', :bold, default: '192.X.X.X'
 
       template 'capistrano/deploy/deploy.rb', 'config/deploy.rb'
       template 'capistrano/deploy/production.rb', 'config/deploy/production.rb'
-      if @add_staging =~ /y/
-        @staging_server_address = ask 'Staging server (192.168.33.10):'
+      if yes?('Add staging? (y/n)')
+        @staging_server_address = ask 'Staging server', :bold, default: '192.X.X.X'
         template 'capistrano/deploy/staging.rb', 'config/deploy/staging.rb'
       end
 
-      p 'to setup server run: $ cap staging deploy:setup_config'
+      say 'to setup server run: $ cap staging deploy:setup_config', :bold
     end
   end
 end
