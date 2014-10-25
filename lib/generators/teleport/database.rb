@@ -1,4 +1,4 @@
-module Initial
+module Teleport
   class DatabaseGenerator < Rails::Generators::Base
     source_root File.expand_path("../templates", __FILE__)
 
