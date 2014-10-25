@@ -15,6 +15,7 @@ Table of content
   * [rails g teleport:welcome](#rails-g-teleportwelcome)
   * [rails g teleport:capistrano](#rails-g-teleportcapistrano)
   * [rails g teleport:bootstrap](#rails-g-teleportbootstrap)
+    * [rails g teleport:bootstrap:navbar](#rails-g-teleportbootstrapnavbar)
   * [rails g teleport:simple_form](#rails-g-teleportsimple_form)
   * [rails g teleport:devise](#rails-g-teleportdevise)
     * [rails g teleport:devise_oauth](#rails-g-teleportdevise_oauth)
@@ -60,6 +61,9 @@ add tasks
 ### rails g teleport:bootstrap
 adds gems `bootstrap-sass`, `kaminari-bootstrap`, `bh`, `autoprefixer-rails`
 binds them with a fresh rails application
+
+#### rails g teleport:bootstrap:navbar
+adds `_navbar.haml` file to a project
 
 ### rails g teleport:simple_form
 adds gem `simple-form`
