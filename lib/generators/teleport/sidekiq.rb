@@ -1,4 +1,4 @@
-module Initial
+module Teleport
   class SidekiqGenerator < Rails::Generators::Base
     def add_gems
       gem 'sidekiq'

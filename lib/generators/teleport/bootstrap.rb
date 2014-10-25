@@ -1,4 +1,4 @@
-module Initial
+module Teleport
   class BootstrapGenerator < Rails::Generators::Base
     source_root File.expand_path("../templates", __FILE__)
 
