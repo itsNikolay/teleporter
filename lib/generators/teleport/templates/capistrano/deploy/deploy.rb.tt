@@ -19,6 +19,7 @@ set(:config_files, %w(
   log_rotation
   monit
   monit_sidekiq
+  puma.rb
   puma.conf
   puma
   run-puma
