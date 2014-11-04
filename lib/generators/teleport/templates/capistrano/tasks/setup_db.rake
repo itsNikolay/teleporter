@@ -21,7 +21,7 @@ namespace :deploy do
   timeout: 5000
   encoding: utf8
   reconnect: false
-  database: #{fetch(:application)}_#{fetch(:rails_env)}
+  database: #{fetch(:application)}
   pool: 5
   username: #{fetch(:deploy_user)}
   password: #{fetch(:db_password)}
@@ -44,7 +44,7 @@ namespace :deploy do
     rescue Exception
     end
     begin
-      execute %Q{echo "CREATE DATABASE #{fetch(:application)}_#{fetch(:rails_env)} WITH OWNER #{fetch(:deploy_user)} ENCODING 'UTF8';" | sudo -u postgres psql}
+      execute %Q{echo "CREATE DATABASE #{fetch(:application)} WITH OWNER #{fetch(:deploy_user)} ENCODING 'UTF8';" | sudo -u postgres psql}
     rescue Exception
     end
     end

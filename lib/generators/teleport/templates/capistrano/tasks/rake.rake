@@ -1,6 +1,6 @@
 namespace :deploy do
   desc 'Run rake task'
-  task :run_rake_task do
+  task :rake do
     on roles(:app) do
       ask(:rake_task, 'Type a rake task (db:seed)')
 

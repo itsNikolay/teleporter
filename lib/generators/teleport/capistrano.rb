@@ -38,7 +38,7 @@ module Teleport
       @app_name = ask 'App name', :bold, default: 'blog'
       @git_repo_url = ask 'Git repo', :bold, default: 'git@github.com:itsNikolay/puma-testing.git'
       @deploy_user = ask 'Deploy username default', :bold, default: 'deploy'
-      @ruby_version = ask 'Ruby version', :bold, limited_to: ['2.1.3', '2.1.2', '1.9.3']
+      @ruby_version = ask 'Ruby version', :bold, limited_to: ['2.1.4', '2.1.3', '2.1.2', '1.9.3']
       @production_server_address = ask 'Production server', :bold, default: '192.X.X.X'
 
       template 'capistrano/deploy/deploy.rb', 'config/deploy.rb'
