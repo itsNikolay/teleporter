@@ -32,7 +32,13 @@ module Teleport
                        "require 'capistrano/puma'\n",
                        after: "require 'capistrano/sidekiq'\n"
       insert_into_file "Capfile",
-                       "require 'capistrano/puma/monit'\n",
+                       %Q{
+require 'capistrano/puma'
+require 'capistrano/puma/workers'
+require 'capistrano/puma/jungle'
+require 'capistrano/puma/monit'
+require 'capistrano/puma/nginx'
+                       },
                        after: "require 'capistrano/sidekiq'\n"
 
       @app_name = ask 'App name', :bold, default: 'blog'
