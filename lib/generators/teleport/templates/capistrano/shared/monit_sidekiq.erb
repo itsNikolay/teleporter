@@ -1,11 +1,10 @@
-<% application = fetch(:application) %>
-set mail-format { subject: <%= "#{fetch(:full_app_name)} - #{fetch(:rails_env)}" %> $SERVICE $EVENT at $DATE }
+set mail-format { subject: <%= "#{fetch(:application)} - #{fetch(:stage)}" %> $SERVICE $EVENT at $DATE }
 
-check process sidekiq
+check process <%= fetch(:application) %>_<%= fetch(:stage) %>
   with pidfile <%= current_path %>/tmp/pids/sidekiq.pid
-  start program = "/etc/init.d/sidekiq_<%= application %>_<%= fetch(:rails_env)%> start"
-  stop program = "/etc/init.d/sidekiq_<%= application %>_<%= fetch(:rails_env)%> stop"
+  start program = "/etc/init.d/sidekiq_<%= fetch(:application) %>_<%= fetch(:stage)%> start"
+  stop program = "/etc/init.d/sidekiq_<%= fetch(:application) %>_<%= fetch(:stage)%> stop"
   if mem is greater than 500.0 MB for 1 cycles then restart       # eating up memory?
-  if cpu is greater than 50% for 2 cycles then alert                  # send an email to admin
-  if cpu is greater than 80% for 30 cycles then restart                # hung process?
+  if cpu is greater than 50% for 2 cycles then alert              # send an email to admin
+  if cpu is greater than 80% for 30 cycles then restart           # hung process?
   group sidekiq

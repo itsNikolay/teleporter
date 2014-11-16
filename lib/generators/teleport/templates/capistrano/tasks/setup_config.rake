@@ -12,20 +12,21 @@ namespace :deploy do
       set(:symlinks, [
         {
           source: "log_rotation",
-          link: "/etc/logrotate.d/{{application}}"
+          link: "/etc/logrotate.d/{{application}}_{{stage}}"
         },
         {
           source: "monit_sidekiq",
-          link: "/etc/monit/conf.d/sidekiq_{{application}}.conf"
+          link: "/etc/monit/conf.d/sidekiq_{{application}}_{{stage}}.conf"
         },
         {
           source: "sidekiq_init.sh",
-          link: "/etc/init.d/sidekiq_{{application}}"
+          link: "/etc/init.d/sidekiq_{{application}}_{{stage}}"
         },
       ])
       execute :mkdir, "-p #{shared_path}/config"
       execute :mkdir, "-p #{current_path}"
       application = fetch(:application)
+      stage = fetch(:stage)
 
       config_files = fetch(:config_files)
       config_files.each do |file|
