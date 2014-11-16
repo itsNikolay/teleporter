@@ -1,9 +1,7 @@
 set :stage, :staging
 set :rails_env, :staging
-set :application, "<%= @app_name %>_#{fetch(:stage)}"
 set :branch, "master"
 set :deploy_user, '<%= @deploy_user %>'
-set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:application)}"
 set :ip, '<%= @staging_server_address %>'
 
 role :web, ["#{fetch(:deploy_user)}@#{fetch(:ip)}"]
