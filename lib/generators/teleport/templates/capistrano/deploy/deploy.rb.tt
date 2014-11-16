@@ -2,7 +2,6 @@ lock '3.2.1'
 
 set :repo_url, '<%= @git_repo_url %>'
 set :application, '<%= @app_name %>'
-set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:application)}_#{fetch(:stage)}"
 
 set :puma_init_active_record, true
 set :puma_preload_app, false
