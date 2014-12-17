@@ -9,7 +9,7 @@ module Teleport
         gem 'capistrano-bundler'
         gem 'capistrano-rails'
         gem 'capistrano-sidekiq'
-        gem 'capistrano3-puma', github: 'itsNikolay/capistrano-puma', branch: 'puma_monit_namespace'
+        gem 'capistrano3-puma'
       end
 
       Bundler.with_clean_env do
