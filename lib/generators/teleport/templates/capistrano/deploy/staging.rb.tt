@@ -1,6 +1,7 @@
 set :stage, :staging
 set :rails_env, :staging
-set :branch, "master"
+set :branch, 'master'
+
 set :deploy_user, '<%= @deploy_user %>'
 set :ip, '<%= @staging_server_address %>'
 

@@ -29,9 +29,6 @@ module Teleport
                        "require 'capistrano/sidekiq'\n",
                        after: "require 'capistrano/rails/migrations'\n"
       insert_into_file "Capfile",
-                       "require 'capistrano/puma'\n",
-                       after: "require 'capistrano/sidekiq'\n"
-      insert_into_file "Capfile",
                        %Q{
 require 'capistrano/puma'
 require 'capistrano/puma/workers'

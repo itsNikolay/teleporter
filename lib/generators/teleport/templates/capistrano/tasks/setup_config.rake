@@ -25,8 +25,6 @@ namespace :deploy do
       ])
       execute :mkdir, "-p #{shared_path}/config"
       execute :mkdir, "-p #{current_path}"
-      application = fetch(:application)
-      stage = fetch(:stage)
 
       config_files = fetch(:config_files)
       config_files.each do |file|
@@ -72,7 +70,7 @@ end
 def sub_strings(input_string)
   output_string = input_string
   input_string.scan(/{{(\w*)}}/).each do |var|
-    output_string.gsub!("{{#{var[0]}}}", fetch(var[0].to_sym))
+    output_string.gsub!("{{#{var[0]}}}", fetch(var[0].to_sym).to_s)
   end
   output_string
 end

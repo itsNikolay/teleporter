@@ -1,6 +1,7 @@
 set :stage, :production
 set :rails_env, :production
-set :branch, "master"
+set :branch, 'master'
+
 set :deploy_user, '<%= @deploy_user %>'
 set :ip, '<%= @production_server_address %>'
 
